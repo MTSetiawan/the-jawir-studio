@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -84,9 +85,12 @@ export default function HomePage() {
             Setiap lantai menyimpan rahasia. dan ibumu telah menunggumu
           </p>
           <div className="mt-8">
-              <Link className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 px-8 py-3 rounded-lg font-semibold tracking-wider uppercase transition-all duration-300 shadow-lg shadow-red-600/30 hover:shadow-red-600/50 hover:scale-105 border border-red-500/50" href="https://drive.google.com/file/d/1o_gmmOeMcRC6NHiXwMoIDSK16NDLAmRm/view?usp=drive_link">
+            <Link
+              className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 px-8 py-3 rounded-lg font-semibold tracking-wider uppercase transition-all duration-300 shadow-lg shadow-red-600/30 hover:shadow-red-600/50 hover:scale-105 border border-red-500/50"
+              href="https://drive.google.com/file/d/1o_gmmOeMcRC6NHiXwMoIDSK16NDLAmRm/view?usp=drive_link"
+            >
               Play Now
-              </Link>
+            </Link>
           </div>
         </div>
       </section>
