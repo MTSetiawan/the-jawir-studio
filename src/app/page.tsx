@@ -1,102 +1,201 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="bg-black text-white font-sans">
+      {/* NAVBAR */}
+      <nav className="flex justify-between items-center p-6 bg-gradient-to-r from-red-900 to-black fixed top-0 w-full z-50 shadow-lg shadow-red-900/20 border-b border-red-800/30">
+        {/* LOGO */}
+        <div className="flex items-center">
+          <img
+            src="/logo1.jpg"
+            alt="Game Logo"
+            className="h-10 w-auto drop-shadow-lg drop-shadow-red-600/50 hover:scale-105 transition-transform duration-300"
+          />
+        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        {/* NAVIGATION LINKS */}
+        <div className="space-x-6 text-sm uppercase tracking-wider">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#about"
+            className="hover:text-red-400 transition-colors duration-300 hover:drop-shadow-lg hover:drop-shadow-red-500/50"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            About
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#trailer"
+            className="hover:text-red-400 transition-colors duration-300 hover:drop-shadow-lg hover:drop-shadow-red-500/50"
           >
-            Read our docs
+            Trailer
+          </a>
+          <a
+            href="#screenshots"
+            className="hover:text-red-400 transition-colors duration-300 hover:drop-shadow-lg hover:drop-shadow-red-500/50"
+          >
+            Screenshots
+          </a>
+          <a
+            href="#contact"
+            className="hover:text-red-400 transition-colors duration-300 hover:drop-shadow-lg hover:drop-shadow-red-500/50"
+          >
+            Contact
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </nav>
+
+      {/* HERO */}
+      <section
+        className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24 overflow-hidden"
+        id="hero"
+      >
+        {/* ANIMATED BACKGROUND OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-b from-red-900/30 via-black/80 to-black animate-pulse"></div>
+
+        {/* BACKGROUND IMAGE */}
+        <div
+          className="absolute inset-0 bg-[url('/bg-hero.jpg')] bg-cover bg-center opacity-30 mix-blend-multiply"
+          aria-hidden="true"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+          <img src="/background.jpg" alt="..." className="z-10 opacity-50" />
+        </div>
+
+        {/* RED GLOW EFFECTS */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-red-600/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-40 right-20 w-40 h-40 bg-red-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+        {/* FOREGROUND CONTENT */}
+        <div className="relative z-10 flex flex-col items-center space-y-6">
+          <img
+            src="/logo.png"
+            alt="Game Logo"
+            className="w-40 mx-auto drop-shadow-2xl drop-shadow-red-600/50 hover:scale-105 transition-transform duration-500"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          <p className="text-lg text-red-100 max-w-xl leading-relaxed tracking-wide drop-shadow-lg text-center">
+            Setiap lantai menyimpan rahasia. dan ibumu telah menunggumu
+          </p>
+          <div className="mt-8">
+            <button className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 px-8 py-3 rounded-lg font-semibold tracking-wider uppercase transition-all duration-300 shadow-lg shadow-red-600/30 hover:shadow-red-600/50 hover:scale-105 border border-red-500/50">
+              Play Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section
+        id="about"
+        className="py-20 px-6 text-center bg-gradient-to-b from-black to-red-950/20 border-t border-red-800/30"
+      >
+        <h2 className="text-4xl font-bold mb-8 text-red-400 drop-shadow-lg tracking-wide">
+          About the Game
+        </h2>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-red-950/20 p-8 rounded-lg border border-red-800/30 shadow-xl shadow-red-900/20 backdrop-blur-sm">
+            <p className="text-gray-200 leading-relaxed text-lg">
+              Seorang pemuda yang sedang menjaga ibunya di rumah sakit tidak
+              sengaja terjebak di lantai 8 rumah sakit itu yang kosong dan
+              terkenal angker, disana dia harus memecahkan misteri yang ada di
+              dalamnya agar dapat sampai ke lantai 4 dan harus melewati lantai
+              diatas 4 yang kosong juga, mampukah dia bisa kembali dengan
+              selamat serta dapat mengatasi semua gangguan dari makhluk halus
+              penunggu setiap ruangan yang ada di setiap lantai tersebut?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* TRAILER */}
+      <section
+        id="trailer"
+        className="py-20 px-6 text-center bg-gradient-to-b from-red-950/20 to-black"
+      >
+        <h2 className="text-4xl font-bold mb-8 text-red-400 drop-shadow-lg tracking-wide">
+          Game Trailer
+        </h2>
+        <div className="aspect-video max-w-4xl mx-auto">
+          <div className="relative">
+            <iframe
+              className="w-full h-full rounded-lg shadow-2xl shadow-red-900/40 border border-red-800/30"
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="Game Trailer"
+              allowFullScreen
+            ></iframe>
+            <div className="absolute -inset-1 bg-gradient-to-r from-red-600/20 to-transparent rounded-lg blur opacity-75"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* SCREENSHOTS */}
+      <section
+        id="screenshots"
+        className="py-20 px-6 bg-gradient-to-b from-black to-red-950/20 border-t border-red-800/30"
+      >
+        <h2 className="text-4xl font-bold mb-8 text-center text-red-400 drop-shadow-lg tracking-wide">
+          Screenshots
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="group relative overflow-hidden rounded-lg">
+            <img
+              src="/screenshot1.png"
+              alt="Screenshot 1"
+              className="rounded-lg shadow-xl shadow-red-900/30 border border-red-800/30 transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <div className="group relative overflow-hidden rounded-lg">
+            <img
+              src="/screenshot2.png"
+              alt="Screenshot 2"
+              className="rounded-lg shadow-xl shadow-red-900/30 border border-red-800/30 transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <div className="group relative overflow-hidden rounded-lg">
+            <img
+              src="/screenshot3.png"
+              alt="Screenshot 3"
+              className="rounded-lg shadow-xl shadow-red-900/30 border border-red-800/30 transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="py-20 px-6 text-center bg-gradient-to-b from-red-950/20 to-black"
+      >
+        <h2 className="text-4xl font-bold mb-8 text-red-400 drop-shadow-lg tracking-wide">
+          Contact
+        </h2>
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-red-950/20 p-8 rounded-lg border border-red-800/30 shadow-xl shadow-red-900/20 backdrop-blur-sm space-y-4">
+            <p className="text-red-200 text-lg">📧 yourgame@email.com</p>
+            <p className="text-red-200 text-lg">
+              💬 Join us on{" "}
+              <a
+                href="https://discord.gg/yourgame"
+                className="text-red-400 hover:text-red-300 underline decoration-red-500/50 hover:decoration-red-400 transition-colors duration-300"
+              >
+                Discord
+              </a>{" "}
+              or{" "}
+              <a
+                href="https://twitter.com/yourgame"
+                className="text-red-400 hover:text-red-300 underline decoration-red-500/50 hover:decoration-red-400 transition-colors duration-300"
+              >
+                Twitter
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="text-center py-8 text-sm text-red-300/70 bg-gradient-to-r from-red-950/40 via-black to-red-950/40 border-t border-red-800/30">
+        <div className="max-w-4xl mx-auto">
+          &copy; {new Date().getFullYear()} The Jawir Studio. All rights
+          reserved.
+        </div>
       </footer>
     </div>
   );
