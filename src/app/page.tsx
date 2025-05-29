@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HomePage() {
   return (
     <div className="bg-black text-white font-sans">
@@ -5,10 +7,12 @@ export default function HomePage() {
       <nav className="flex justify-between items-center p-6 bg-gradient-to-r from-red-900 to-black fixed top-0 w-full z-50 shadow-lg shadow-red-900/20 border-b border-red-800/30">
         {/* LOGO */}
         <div className="flex items-center">
-          <img
+          <Image
             src="/logo1.jpg"
             alt="Game Logo"
             className="h-10 w-auto drop-shadow-lg drop-shadow-red-600/50 hover:scale-105 transition-transform duration-300"
+            width={200}
+            height={200}
           />
         </div>
 
@@ -54,7 +58,13 @@ export default function HomePage() {
           className="absolute inset-0 bg-[url('/bg-hero.jpg')] bg-cover bg-center opacity-30 mix-blend-multiply"
           aria-hidden="true"
         >
-          <img src="/background.jpg" alt="..." className="z-10 opacity-50" />
+          <Image
+            src="/background.jpg"
+            alt="..."
+            className="z-10 opacity-50"
+            width={200}
+            height={200}
+          />
         </div>
 
         {/* RED GLOW EFFECTS */}
@@ -63,10 +73,12 @@ export default function HomePage() {
 
         {/* FOREGROUND CONTENT */}
         <div className="relative z-10 flex flex-col items-center space-y-6">
-          <img
+          <Image
             src="/logo.png"
             alt="Game Logo"
             className="w-40 mx-auto drop-shadow-2xl drop-shadow-red-600/50 hover:scale-105 transition-transform duration-500"
+            width={200}
+            height={200}
           />
           <p className="text-lg text-red-100 max-w-xl leading-relaxed tracking-wide drop-shadow-lg text-center">
             Setiap lantai menyimpan rahasia. dan ibumu telah menunggumu
@@ -133,26 +145,32 @@ export default function HomePage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="group relative overflow-hidden rounded-lg">
-            <img
+            <Image
               src="/screenshot1.png"
               alt="Screenshot 1"
               className="rounded-lg shadow-xl shadow-red-900/30 border border-red-800/30 transition-transform duration-500 group-hover:scale-110"
+              width={200}
+              height={200}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div className="group relative overflow-hidden rounded-lg">
-            <img
+            <Image
               src="/screenshot2.png"
               alt="Screenshot 2"
               className="rounded-lg shadow-xl shadow-red-900/30 border border-red-800/30 transition-transform duration-500 group-hover:scale-110"
+              width={200}
+              height={200}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div className="group relative overflow-hidden rounded-lg">
-            <img
+            <Image
               src="/screenshot3.png"
               alt="Screenshot 3"
               className="rounded-lg shadow-xl shadow-red-900/30 border border-red-800/30 transition-transform duration-500 group-hover:scale-110"
+              width={200}
+              height={200}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
