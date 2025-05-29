@@ -153,8 +153,8 @@ export default function HomePage() {
               src="/screenshot1.png"
               alt="Screenshot 1"
               className="rounded-lg shadow-xl shadow-red-900/30 border border-red-800/30 transition-transform duration-500 group-hover:scale-110"
-              width={200}
-              height={200}
+              width={500}
+              height={500}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
@@ -163,8 +163,8 @@ export default function HomePage() {
               src="/screenshot2.png"
               alt="Screenshot 2"
               className="rounded-lg shadow-xl shadow-red-900/30 border border-red-800/30 transition-transform duration-500 group-hover:scale-110"
-              width={200}
-              height={200}
+              width={500}
+              height={500}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
@@ -173,8 +173,8 @@ export default function HomePage() {
               src="/screenshot3.png"
               alt="Screenshot 3"
               className="rounded-lg shadow-xl shadow-red-900/30 border border-red-800/30 transition-transform duration-500 group-hover:scale-110"
-              width={200}
-              height={200}
+              width={500}
+              height={500}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
